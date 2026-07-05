@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mohan Anand Jha | Indian Actor</title>
+
+<meta name="description" content="Mohan Anand Jha is an Indian actor. Learn about his biography, acting career, achievements, and latest updates.">
+
+<meta name="keywords" content="Mohan Anand Jha, Indian Actor, Actor, Biography, Film Actor, TV Actor">
+
+<meta name="author" content="Mohan Anand Jha">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Mohan Anand Jha | Indian Actor">
+<meta property="og:description" content="Official biography page of Mohan Anand Jha, Indian Actor.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://relaxamj.github.io/mohan-anand-jha/">
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f5f5f5;
+    color:#222;
+}
+
+header{
+    background:#111;
+    color:white;
+    padding:50px;
+    text-align:center;
+}
+
+.container{
+    max-width:900px;
+    margin:40px auto;
+    background:white;
+    padding:40px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,.15);
+}
+
+h1{
+    color:#0057b8;
+}
+
+img{
+    width:220px;
+    border-radius:10px;
+    display:block;
+    margin:auto;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#111;
+    color:white;
+    margin-top:40px;
+}
+</style>
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Mohan Anand Jha",
+  "jobTitle":"Indian Actor",
+  "nationality":"Indian",
+  "description":"Mohan Anand Jha is an Indian actor.",
+  "url":"https://relaxamj.github.io/mohan-anand-jha/"
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+<h1>Mohan Anand Jha</h1>
+<h2>Indian Actor</h2>
+</header>
+
+<div class="container">
+
+<img src="mohan.jpg" alt="Mohan Anand Jha">
+
+<h2>About</h2>
+
+<p>
+Mohan Anand Jha is an Indian actor known for his work in the entertainment industry.
+This website provides information about his acting career, biography, projects, and achievements.
+</p>
+
+<h2>Career</h2>
+
+<ul>
+<li>Indian Actor</li>
+<li>Performer in Film and Television</li>
+<li>Artist and Entertainer</li>
+</ul>
+
+<h2>Contact</h2>
+
+<p>Email: your@email.com</p>
+
+</div>
+
+<footer>
+© 2026 Mohan Anand Jha
+</footer>
+
+</body>
+</html>
