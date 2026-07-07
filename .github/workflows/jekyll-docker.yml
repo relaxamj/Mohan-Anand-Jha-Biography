@@ -1,26 +1,17 @@
-name: Deploy Biography Website
+name: Jekyll Docker Build
 
 on:
   push:
     branches:
       - main
-  workflow_dispatch:
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
+  pull_request:
+    branches:
+      - main
 
 jobs:
-
-  deploy:
-
-    environment:
-      name: github-pages
+  jekyll-build:
 
     runs-on: ubuntu-latest
-
 
     steps:
 
@@ -28,15 +19,37 @@ jobs:
         uses: actions/checkout@v4
 
 
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
+      - name: Build Jekyll site using Docker
+        run: |
+          docker run \
+          --rm \
+          -v "${{ github.workspace }}:/srv/jekyll" \
+          -v "${{ github.workspace }}/_site:/srv/jekyll/_site" \
+          jekyll/builder:latest \
+          jekyll build --future
 
 
-      - name: Upload website
+      - name: Upload Jekyll artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: ./_site
 
 
-      - name: Deploy Website
+  deploy:
+
+    needs: jekyll-build
+
+    runs-on: ubuntu-latest
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+
+
+    steps:
+
+      - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
