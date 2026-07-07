@@ -1,4 +1,4 @@
-name: Deploy Jekyll site
+name: Deploy static website
 
 on:
   push:
@@ -11,37 +11,25 @@ permissions:
   id-token: write
 
 jobs:
-  build:
+
+  deploy:
+    environment:
+      name: github-pages
+
     runs-on: ubuntu-latest
 
     steps:
+
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Build Jekyll
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./
-          destination: ./_site
-
-      - name: Upload site
+      - name: Upload website
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-
-    permissions:
-      pages: write
-      id-token: write
-
-    environment:
-      name: github-pages
-
-    steps:
-      - name: Deploy Pages
-        id: deployment
+      - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
